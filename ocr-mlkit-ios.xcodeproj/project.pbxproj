@@ -13,6 +13,7 @@
 		0E8CD659298AB188003E1EE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E8CD657298AB188003E1EE2 /* Main.storyboard */; };
 		0E8CD65B298AB18A003E1EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8CD65A298AB18A003E1EE2 /* Assets.xcassets */; };
 		0E8CD65E298AB18A003E1EE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E8CD65C298AB18A003E1EE2 /* LaunchScreen.storyboard */; };
+		AA3943C1E670DE6DDF000AC4 /* Pods_ocr_mlkit_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AFC3F42E6DB9BAAFD5451B /* Pods_ocr_mlkit_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0E8CD65A298AB18A003E1EE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E8CD65D298AB18A003E1EE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E8CD65F298AB18A003E1EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		664172B67D22874FE395D532 /* Pods-ocr-mlkit-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ocr-mlkit-ios.release.xcconfig"; path = "Target Support Files/Pods-ocr-mlkit-ios/Pods-ocr-mlkit-ios.release.xcconfig"; sourceTree = "<group>"; };
+		68AFC3F42E6DB9BAAFD5451B /* Pods_ocr_mlkit_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ocr_mlkit_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D928D7F64D04891A5BD96436 /* Pods-ocr-mlkit-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ocr-mlkit-ios.debug.xcconfig"; path = "Target Support Files/Pods-ocr-mlkit-ios/Pods-ocr-mlkit-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3943C1E670DE6DDF000AC4 /* Pods_ocr_mlkit_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0571551C2E3B9E557BA87D92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68AFC3F42E6DB9BAAFD5451B /* Pods_ocr_mlkit_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0E8CD645298AB188003E1EE2 = {
 			isa = PBXGroup;
 			children = (
 				0E8CD650298AB188003E1EE2 /* ocr-mlkit-ios */,
 				0E8CD64F298AB188003E1EE2 /* Products */,
+				E2834B7E01D451D2FC6BF9BE /* Pods */,
+				0571551C2E3B9E557BA87D92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = "ocr-mlkit-ios";
 			sourceTree = "<group>";
 		};
+		E2834B7E01D451D2FC6BF9BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D928D7F64D04891A5BD96436 /* Pods-ocr-mlkit-ios.debug.xcconfig */,
+				664172B67D22874FE395D532 /* Pods-ocr-mlkit-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E8CD662298AB18A003E1EE2 /* Build configuration list for PBXNativeTarget "ocr-mlkit-ios" */;
 			buildPhases = (
+				12D3229FE2FEDDF3390F9A00 /* [CP] Check Pods Manifest.lock */,
 				0E8CD64A298AB188003E1EE2 /* Sources */,
 				0E8CD64B298AB188003E1EE2 /* Frameworks */,
 				0E8CD64C298AB188003E1EE2 /* Resources */,
+				7528F1C4B213970B083E4C11 /* [CP] Embed Pods Frameworks */,
+				C4E1F55CF21DC5A5CE8C0A95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12D3229FE2FEDDF3390F9A00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ocr-mlkit-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7528F1C4B213970B083E4C11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ocr-mlkit-ios/Pods-ocr-mlkit-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ocr-mlkit-ios/Pods-ocr-mlkit-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ocr-mlkit-ios/Pods-ocr-mlkit-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4E1F55CF21DC5A5CE8C0A95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ocr-mlkit-ios/Pods-ocr-mlkit-ios-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ocr-mlkit-ios/Pods-ocr-mlkit-ios-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ocr-mlkit-ios/Pods-ocr-mlkit-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E8CD64A298AB188003E1EE2 /* Sources */ = {
@@ -282,11 +368,13 @@
 		};
 		0E8CD663298AB18A003E1EE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D928D7F64D04891A5BD96436 /* Pods-ocr-mlkit-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4J8KRAWQJ9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ocr-mlkit-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -309,11 +397,13 @@
 		};
 		0E8CD664298AB18A003E1EE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 664172B67D22874FE395D532 /* Pods-ocr-mlkit-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4J8KRAWQJ9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ocr-mlkit-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
